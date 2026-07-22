@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="welcomeScreen" class="welcome-overlay">
+      <div class="welcome-content">
+        <h1 id="typingText" class="fade-text">Website for my Queen</h1>
+        <p id="subText" class="fade-text-sub">I love you forever my life</p>
+        <button class="btn-open" onclick="enterWebsite()">
+          View Our Story
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-fixed"></div>
+    <div class="star-overlay"></div>
+
+    <main id="mainContent" class="hidden-content">
+      <section class="hero active">
+        <div class="hero-content">
+          <h1>Us, in Time.</h1>
+          <p class="subtitle">
+            Every passing second is a story of ours.
+          </p>
+
+          <div class="timer-wrapper">
+            <div class="time-segment">
+              <span id="days">00</span>
+              <span class="label">Days</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="hours">00</span>
+              <span class="label">Hours</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="minutes">00</span>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-segment">
+              <span id="seconds">00</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+
+          <button
+            onclick="scrollToSection('playlist')"
+            class="scroll-indicator"
+            aria-label="Scroll Down"
+          >
+            <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="playlist" class="section">
+        <div class="section-header reveal">
+          <h2>Our Favorite Songs</h2>
+          <p>The melodies that always remind me of you</p>
+        </div>
+
+        <div class="track-list reveal">
+          <div
+            id="track-perfect"
+            class="track-item"
+            onclick="playSong('perfect')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>Perfect</h3>
+              <p>Ed Sheeran</p>
+            </div>
+            <div class="track-duration">4:23</div>
+          </div>
+
+          <div
+            id="track-thousand"
+            class="track-item"
+            onclick="playSong('thousand')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>A Thousand Years</h3>
+              <p>Christina Perri</p>
+            </div>
+            <div class="track-duration">4:45</div>
+          </div>
+
+          <div
+            id="track-allofme"
+            class="track-item"
+            onclick="playSong('allofme')"
+          >
+            <div class="track-icon"><i class="fas fa-play"></i></div>
+            <div class="track-info">
+              <h3>All of Me</h3>
+              <p>John Legend</p>
+            </div>
+            <div class="track-duration">4:29</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stories" class="section">
+        <div class="section-header reveal">
+          <h2>Featured Story Journey</h2>
+          <p>
+            From a simple "hi" to meaningful "don't go." This is my favorite timeline.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-box left reveal">
+            <div class="date-badge">10 Jan 2023</div>
+            <div class="box-content">
+              <h3><i class="fas fa-comments"></i> First Notification</h3>
+              <p>
+                It began with a reply to a story or a shy message. Who would have guessed that your notification that day was the start of the most beautiful story the universe prepared for me.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box right reveal">
+            <div class="date-badge">14 Feb 2023</div>
+            <div class="box-content">
+              <h3><i class="fas fa-coffee"></i> First Meeting</h3>
+              <p>
+                My heart raced faster than usual. In that coffee shop, I saw your smile in person for the first time. In that moment I knew I wanted to see that smile every day.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box left reveal">
+            <div class="date-badge">20 Feb 2023</div>
+            <div class="box-content">
+              <h3><i class="fas fa-heart"></i> We Began</h3>
+              <p>
+                No longer "me" and "you", but "us." The day we agreed to care for each other, understand each other, and walk together. This date will always be our secret code.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box right reveal">
+            <div class="date-badge">15 Mei 2023</div>
+            <div class="box-content">
+              <h3><i class="fas fa-moon"></i> Midnight Conversation</h3>
+              <p>
+                That night, we talked about dreams, fears, and the future until late. There I realized you were not just a partner, but also the home I return to and share every feeling with.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box left reveal">
+            <div class="date-badge">10 Agt 2023</div>
+            <div class="box-content">
+              <h3>
+                <i class="fas fa-plane-departure"></i> First Adventure
+              </h3>
+              <p>
+                Sunset, the sound of waves, and our carefree laughter. This journey taught me that the destination does not matter as long as the travel companion is you.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-box right reveal">
+            <div class="date-badge">12 Des 2023</div>
+            <div class="box-content">
+              <h3><i class="fas fa-gift"></i> Growing Older With You</h3>
+              <p>
+                Blowing out candles next to you felt different. My wish was simple: may it always be your face I see when I open my eyes on my happiest days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header reveal">
+          <h2>Photo Gallery</h2>
+        </div>
+        <div class="gallery-container reveal">
+          <div class="polaroid rotate-left">
+            <img
+              src="img/photo1.jpg" alt="Photo 1"
+            />
+            <div class="caption">Lovely picture</div>
+          </div>
+          <div class="polaroid rotate-right">
+            <img
+              src="img/photo2.jpg" alt="Photo 2"
+            />
+            <div class="caption">Lovely hair</div>
+          </div>
+          <div class="polaroid rotate-left">
+            <img
+              src="img/photo3.jpg" alt="Photo 3"
+            />
+            <div class="caption">Beautiful sunset</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section closing-section reveal">
+        <div class="closing-content">
+          <h2 class="gradient-text-big">
+            I love you so much<br />for as long as I live<br /><span
+              class="highlight-pink"
+              >Mruh</span
+            >
+          </h2>
+
+          <div class="glow-box">
+            <i
+              class="fas fa-heart heart-beat"
+              id="loveIcon"
+              onclick="createHeartShower()"
+            ></i>
+            <p>
+              My heart whispers your name in every quiet moment, carrying the melody of devotion that never fades. You are the light that softens my darkest days, the gentle touch that steadies my restless soul. In your presence, I find peace, and in your smile, I discover endless joy. Love is not just a feeling—it is the rhythm of my existence, the poetry of my breath, and the promise I hold close: that with you, every tomorrow is brighter than today.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Made with all my heart, for you.</p>
+      </footer>
+    </main>
+
+    <div class="music-floater" id="playerBar">
+      <div class="floater-info">
+        <div class="equalizer"><span></span><span></span><span></span></div>
+        <span id="currentSongTitle" class="song-title">Select a song...</span>
+      </div>
+      <button
+        onclick="toggleMusic()"
+        class="btn-control"
+        aria-label="Play Music"
+      >
+        <i class="fas fa-play" id="mainPlayIcon"></i>
+      </button>
+    </div>
+
+    <audio id="myAudio" loop>
+      <source src="myAudio/teddy-afro.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
